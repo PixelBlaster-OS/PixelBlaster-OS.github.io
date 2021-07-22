@@ -1664,6 +1664,8 @@ input, select, textarea {
 			position: relative;
 			padding-bottom: 56.25%; /* 16:9 */
 			padding-top: 25px;
+			overflow: auto;
+			-webkit-overflow-scrolling:touch;
 			height: 0;
 		}
 		.myFrame iframe {
