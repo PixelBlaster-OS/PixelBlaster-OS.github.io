@@ -105,6 +105,21 @@
                             <p></p>
                         </div>
                     </div>
+
+                    <div class="w3-row-padding w3-center w3-margin-top">
+                        <!--<div class="w3-third">-->
+                        <div class="w3-card w3-container" style="min-height: 460px; font-family: 'DM Mono', monospace;">
+                            <h3 class="cursive">Redmi Note 7</h3>
+                            <br />
+                            <img src="images/waterdrop.png" class="fa fa-rocket w3-margin-bottom w3-text-theme w3-image" style="font-size: 120px; max-width: 200px;" />
+                            <p>Maintainer: <a href="https://t.me/Lucifer_morning_star_96">Mukul Sharma</a></p>
+                            <p>Download: <a href="https://github.com/PixelBlaster-Releases/lavender">Here</a></p>
+                            <p>Changelog: <a href="#lavenderc">Here</a></p>
+                            <p>XDA: <a href="https://forum.xda-developers.com/t/pixel-blaster-os-3-0.4331397/">Here</a></p>
+                            <p></p>
+                        </div>
+                    </div>
+
                 </article>
 
                 <!-- Realme -->
@@ -286,7 +301,8 @@
             url_rmx1971 = "https://raw.githubusercontent.com/PixelBlaster-Releases/RMX1971/main/devicechangelog.md";
             url_violet = "https://raw.githubusercontent.com/PixelBlaster-Releases/violet/main/devicechangelog.md";
 			url_rmx2170 = "https://raw.githubusercontent.com/PixelBlaster-Releases/RMX2170/main/devicechangelog.md";
-			url_rmx1941 = "https://raw.githubusercontent.com/PixelBlaster-Releases/RMX1941/main/devicechangelog.md"
+			url_rmx1941 = "https://raw.githubusercontent.com/PixelBlaster-Releases/RMX1941/main/devicechangelog.md";
+			url_lavender = "https://raw.githubusercontent.com/PixelBlaster-Releases/lavender/main/devicechangelog.md";
 
             $.ajax({
                 url: url_lemonkebab,
@@ -395,6 +411,18 @@
                 success: function (results) {
                     var html = self.converter.makeHtml(results);
                     const output = document.getElementById("rmx1941");
+                    output.innerHTML = html;
+                },
+            });
+
+
+            $.ajax({
+                url: url_lavender,
+                type: "GET",
+                dataType: "text",
+                success: function (results) {
+                    var html = self.converter.makeHtml(results);
+                    const output = document.getElementById("lavender");
                     output.innerHTML = html;
                 },
             });
