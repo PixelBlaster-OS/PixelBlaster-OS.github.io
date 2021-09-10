@@ -137,6 +137,21 @@
                             <p></p>
                         </div>
                     </div>
+
+					<div class="w3-row-padding w3-center w3-margin-top">
+						<!--<div class="w3-third">-->
+						<div class="w3-card w3-container" style="min-height: 460px; font-family: 'DM Mono', monospace;">
+							<h3 class="cursive">Realme 7 Pro</h3>
+							<br />
+							<img src="images/right-hole.png" class="fa fa-rocket w3-margin-bottom w3-text-theme w3-image" style="font-size: 120px; max-width: 200px;" />
+							<p>Maintainer: <a href="https://t.me/HarshilKosambi">Harshil Kosambi</a></p>
+							<p>Download: <a href="https://github.com/PixelBlaster-Releases/RMX2170">Here</a></p>
+							<p>Changelog: <a href="#rmx2170c">Here</a></p>
+							<p>XDA: <a href="https://forum.xda-developers.com/t/rom-11-pixel-blaster-official-rmx2170-realme-7-pro.4330535/">Here</a></p>
+							<p></p>
+						</div>
+					</div>
+
                 </article>
 
                 <!-- Nokia -->
@@ -218,6 +233,11 @@
                     <h2 class="major">Changelogs</h2>
                     <div id="rmx1971"></div>
                 </article>
+
+                <article id="rmx2170c">
+                    <h2 class="major">Changelogs</h2>
+                    <div id="rmx2170"></div>
+                </article>				
             </div>
             <!-- Footer -->
             <footer id="footer">
@@ -245,6 +265,7 @@
             url_lemonkebab = "https://raw.githubusercontent.com/PixelBlaster-Releases/lemonkebab/main/devicechangelog.md";
             url_rmx1971 = "https://raw.githubusercontent.com/PixelBlaster-Releases/RMX1971/main/devicechangelog.md";
             url_violet = "https://raw.githubusercontent.com/PixelBlaster-Releases/violet/main/devicechangelog.md";
+			url_rmx2170 = "https://raw.githubusercontent.com/PixelBlaster-Releases/RMX2170/main/devicechangelog.md";
 
             $.ajax({
                 url: url_lemonkebab,
@@ -333,6 +354,18 @@
                     output.innerHTML = html;
                 },
             });
+
+            $.ajax({
+                url: url_rmx2170,
+                type: "GET",
+                dataType: "text",
+                success: function (results) {
+                    var html = self.converter.makeHtml(results);
+                    const output = document.getElementById("rmx2170");
+                    output.innerHTML = html;
+                },
+            });			
+
         </script>
     </body>
 </html>
