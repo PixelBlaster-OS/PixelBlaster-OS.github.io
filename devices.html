@@ -135,6 +135,21 @@
                         </div>
                     </div>
 
+
+                    <div class="w3-row-padding w3-center w3-margin-top">
+                        <!--<div class="w3-third">-->
+                        <div class="w3-card w3-container" style="min-height: 460px; font-family: 'DM Mono', monospace;">
+                            <h3 class="cursive">Redmi Note 9T / Poco M3 </h3>
+                            <br />
+                            <img src="images/waterdrop.png" class="fa fa-rocket w3-margin-bottom w3-text-theme w3-image" style="font-size: 120px; max-width: 200px;" />
+                            <p>Maintainer: <a href="https://t.me/isnrdra">isnrdra</a></p>
+                            <p>Download: <a href="https://github.com/PixelBlaster-Releases/juice">Here</a></p>
+                            <p>Changelog: <a href="#juicec">Here</a></p>
+                            <p>XDA: <a href="https://forum.xda-developers.com/t/rom-11-0-official-pixelblaster-os-redmi-9t-poco-m3-unified.4318435/">Here</a></p>
+                            <p></p>
+                        </div>
+                    </div>
+
                 </article>
 
                 <!-- Realme -->
@@ -272,6 +287,12 @@
                     <div id="ginkgo"></div>
                 </article>
 
+
+                <article id="juicec">
+                    <h2 class="major">Changelogs</h2>
+                    <div id="juice"></div>
+                </article>
+
                 <!--Realme-->
 
                 <article id="rmx1851c">
@@ -325,6 +346,7 @@
 			url_rmx1941 = "https://raw.githubusercontent.com/PixelBlaster-Releases/RMX1941/main/devicechangelog.md";
 			url_lavender = "https://raw.githubusercontent.com/PixelBlaster-Releases/lavender/main/devicechangelog.md";
 			url_ginkgo = "https://raw.githubusercontent.com/PixelBlaster-Releases/ginkgo/main/devicechangelog.md";
+			url_juice = "https://raw.githubusercontent.com/PixelBlaster-Releases/juice/main/devicechangelog.md"
 
             $.ajax({
                 url: url_lemonkebab,
@@ -457,6 +479,18 @@
                 success: function (results) {
                     var html = self.converter.makeHtml(results);
                     const output = document.getElementById("ginkgo");
+                    output.innerHTML = html;
+                },
+            });
+
+
+            $.ajax({
+                url: url_juice,
+                type: "GET",
+                dataType: "text",
+                success: function (results) {
+                    var html = self.converter.makeHtml(results);
+                    const output = document.getElementById("juice");
                     output.innerHTML = html;
                 },
             });
