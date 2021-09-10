@@ -120,6 +120,21 @@
                         </div>
                     </div>
 
+
+                    <div class="w3-row-padding w3-center w3-margin-top">
+                        <!--<div class="w3-third">-->
+                        <div class="w3-card w3-container" style="min-height: 460px; font-family: 'DM Mono', monospace;">
+                            <h3 class="cursive">Redmi Note 8/8T</h3>
+                            <br />
+                            <img src="images/waterdrop.png" class="fa fa-rocket w3-margin-bottom w3-text-theme w3-image" style="font-size: 120px; max-width: 200px;" />
+                            <p>Maintainer: <a href="https://t.me/Enprytna">Enprytna</a></p>
+                            <p>Download: <a href="https://github.com/PixelBlaster-Releases/ginkgo">Here</a></p>
+                            <p>Changelog: <a href="#ginkgoc">Here</a></p>
+                            <p>XDA: <a href="https://forum.xda-developers.com/t/rom-11-pixelblaster-os-2-5-for-redmi-note-8-8t-official-unified.4315263/post-85608133">Here</a></p>
+                            <p></p>
+                        </div>
+                    </div>
+
                 </article>
 
                 <!-- Realme -->
@@ -251,6 +266,12 @@
                     <div id="miatoll"></div>
                 </article>
 
+
+                <article id="ginkgoc">
+                    <h2 class="major">Changelogs</h2>
+                    <div id="ginkgo"></div>
+                </article>
+
                 <!--Realme-->
 
                 <article id="rmx1851c">
@@ -303,6 +324,7 @@
 			url_rmx2170 = "https://raw.githubusercontent.com/PixelBlaster-Releases/RMX2170/main/devicechangelog.md";
 			url_rmx1941 = "https://raw.githubusercontent.com/PixelBlaster-Releases/RMX1941/main/devicechangelog.md";
 			url_lavender = "https://raw.githubusercontent.com/PixelBlaster-Releases/lavender/main/devicechangelog.md";
+			url_ginkgo = "https://raw.githubusercontent.com/PixelBlaster-Releases/ginkgo/main/devicechangelog.md";
 
             $.ajax({
                 url: url_lemonkebab,
@@ -423,6 +445,18 @@
                 success: function (results) {
                     var html = self.converter.makeHtml(results);
                     const output = document.getElementById("lavender");
+                    output.innerHTML = html;
+                },
+            });
+
+
+            $.ajax({
+                url: url_ginkgo,
+                type: "GET",
+                dataType: "text",
+                success: function (results) {
+                    var html = self.converter.makeHtml(results);
+                    const output = document.getElementById("ginkgo");
                     output.innerHTML = html;
                 },
             });
