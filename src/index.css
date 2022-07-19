@@ -5,9 +5,57 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+div {
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.type-anim {
+  width: 37ch;
+  animation: typing 3s steps(37), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+.type-anim1 {
+  width: 17ch;
+  animation: typing 3s steps(17), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+* {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+*::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
