@@ -9,7 +9,7 @@ function App() {
   //const location = useLocation();
   return (
 
-    <Router >
+    <Router basename="/pb-web-test">
       <AnimateRoutes />
     </Router>
 
