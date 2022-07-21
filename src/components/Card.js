@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaRocket } from 'react-icons/fa'
 
 const Card = props => {
   return (

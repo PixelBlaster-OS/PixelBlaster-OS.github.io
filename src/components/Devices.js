@@ -3,7 +3,6 @@ import DeviceCard from './DeviceCard'
 import { MdArrowBackIosNew } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import Transition from './Transition';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { FaSearch } from 'react-icons/fa';
 
