@@ -54,6 +54,11 @@ textarea:focus, input:focus{
   display: none;  /* Safari and Chrome */
 }
 
+.iframe {
+  -webkit-transform:scale(0.1),
+  -moz-transform-scale(0.5);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

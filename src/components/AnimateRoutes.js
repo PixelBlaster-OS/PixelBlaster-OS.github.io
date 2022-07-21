@@ -4,6 +4,8 @@ import { AnimatePresence } from 'framer-motion';
 import About from './About';
 import Devices from './Devices';
 import Home from './Home';
+import UnsupportedDevice from './UnsupportedDevice';
+import MaintainerForm from './MaintainerForm';
 
 const AnimateRoutes = () => {
   const location=useLocation();
@@ -14,6 +16,8 @@ const AnimateRoutes = () => {
       <Route index element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/devices" element={<Devices />} />
+      <Route path="/unsupported_device" element={<UnsupportedDevice />} />
+      <Route path="/maintainer_form" element={<MaintainerForm />} />
     </Routes>
   </AnimatePresence >
   )
