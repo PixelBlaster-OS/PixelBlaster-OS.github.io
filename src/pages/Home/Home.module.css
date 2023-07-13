@@ -1,0 +1,44 @@
+@import '../../variables.css';
+
+.card {
+    margin-top: var(--margin-medium-s);
+    display: flex;
+    border-radius: 64px;
+    background-color: #ebdbb2;
+    height: 100%;
+    margin: var(--margin-medium-sm);
+    padding: var(--margin-medium-sm) var(--margin-large);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: var(--margin-medium-s);
+}
+
+.content__text {
+    width:60%;
+}
+
+.content__title {
+    font-size: var(--font-large-l);
+    font-weight: 900;
+    margin-bottom: var(--margin-medium-sm);
+    color: #282828;
+}
+
+.content__description {
+    font-size: var(--font-medium);
+    color: #282828;
+}
+
+.image {
+    height: 70vh;
+    width: auto;
+}
+
+.content__image {
+    width: 40%;
+}
