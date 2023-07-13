@@ -1,6 +1,6 @@
 .card {
     position: relative;
-    background-color: #282828;
+    background-color: var(--color-dark);
     display: flex;
     border-radius: 64px;
     align-items: center;
@@ -21,13 +21,13 @@
 
 .card__content__text {
     font-size: var(--font-small);
-    color: #ebdbb2;
+    color: var(--color-light);
 }
 
 .card__content__title {
     font-size: var(--font-medium-large);
     font-weight: 900;
-    color: #ebdbb2;
+    color: var(--color-light);
 }
 
 .card__button {
@@ -35,12 +35,12 @@
     right: 0;
     bottom: 0;
     margin: var(--margin-medium);
-    background-color: #ebdbb2;
+    background-color: var(--color-light);
     border-radius: 64px;
     padding: var(--margin-small);
     border: none;
     font-size: var(--font-medium-s);
     font-weight: 700;
-    color: #282828;
+    color: var(--color-dark);
     cursor: pointer;
 }

@@ -15,4 +15,9 @@
     --margin-medium-sm: 1.5rem;
     --margin-medium-s: 1.25rem;
     --margin-small: 1rem;
+
+    --color-dark: #282828;
+    --color-light: #ebdbb2;
+
+    --filter: invert(93%) sepia(15%) saturate(607%) hue-rotate(341deg) brightness(94%) contrast(96%);
   }

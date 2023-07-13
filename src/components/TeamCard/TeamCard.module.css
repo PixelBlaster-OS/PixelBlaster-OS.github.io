@@ -1,5 +1,5 @@
 .card {
-    background-color: #282828;
+    background-color: var(--color-dark);
     display: flex;
     border-radius: 64px;
     align-items: center;
@@ -32,13 +32,13 @@
 .content__details__text__name {
     font-size: var(--font-medium);
     font-weight: 600;
-    color: #ebdbb2;
+    color: var(--color-light);
 }
 
 .content__details__text__role {
     font-size: var(--font-small);
     font-weight: 400;
-    color: #ebdbb2;
+    color: var(--color-light);
 }
 
 .content__details__text__socials {
@@ -47,20 +47,20 @@
     -webkit-box-align: center;
     align-items: center;
     gap: 1.75rem;
-    filter: invert(93%) sepia(15%) saturate(607%) hue-rotate(341deg) brightness(94%) contrast(96%);
+    filter: var(--filter);
 }
 
 .content__tagline {
     padding-top: var(--margin-medium-s);
     margin-left: var(--margin-medium);
     margin-right: var(--margin-medium);
-    border-top: 1px solid rgb(74, 71, 62);
+    border-top: 1px solid var(--color-light);
 }
 
 .content__tagline__text {
     font-size: var(--font-medium-s);
     font-weight: 400;
-    color: #ebdbb2;
+    color: var(--color-light);
 }
 
 

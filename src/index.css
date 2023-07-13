@@ -1,9 +1,10 @@
+@import 'variables.css';
 :root {
   font-family: 'JetBrains Mono', monospace;
   line-height: 1.5;
   font-weight: 400;
 
-  background-color: #282828;
+  background-color: var(--color-dark);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

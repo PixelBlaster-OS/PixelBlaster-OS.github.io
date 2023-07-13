@@ -7,7 +7,7 @@
     grid-auto-rows: 20rem;
     gap: var(--margin-medium-lm);
     border-radius: 64px;
-    background-color: #ebdbb2;
+    background-color: var(--color-light);
     height: 100%;
     margin: var(--margin-medium-sm);
     padding: var(--margin-large);

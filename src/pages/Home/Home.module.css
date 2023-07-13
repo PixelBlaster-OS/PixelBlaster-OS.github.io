@@ -4,7 +4,7 @@
     margin-top: var(--margin-medium-s);
     display: flex;
     border-radius: 64px;
-    background-color: #ebdbb2;
+    background-color: var(--color-light);
     height: 100%;
     margin: var(--margin-medium-sm);
     padding: var(--margin-medium-sm) var(--margin-large);
@@ -26,12 +26,12 @@
     font-size: var(--font-large-l);
     font-weight: 900;
     margin-bottom: var(--margin-medium-sm);
-    color: #282828;
+    color: var(--color-dark);
 }
 
 .content__description {
     font-size: var(--font-medium);
-    color: #282828;
+    color: var(--color-dark);
 }
 
 .image {
