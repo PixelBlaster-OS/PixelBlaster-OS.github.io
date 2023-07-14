@@ -5,6 +5,7 @@
     border-radius: 64px;
     align-items: center;
     padding: var(--margin-medium-s);
+    box-shadow: #000 0px 5px 15px;
 }
 
 .card__image {

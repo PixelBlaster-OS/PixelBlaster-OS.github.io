@@ -11,6 +11,7 @@
     height: 100%;
     margin: var(--margin-medium-sm);
     padding: var(--margin-large);
+    box-shadow: #000 0px 5px 15px;
     overflow-y: scroll;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;  /* Internet Explorer 10+ */

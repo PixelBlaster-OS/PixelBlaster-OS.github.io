@@ -6,6 +6,7 @@
     flex-direction: column;
     gap: var(--margin-medium-sm);
     justify-content: center;
+    box-shadow: #000 0px 5px 15px;
 
 }
 

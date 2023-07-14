@@ -8,6 +8,7 @@
     height: 100%;
     margin: var(--margin-medium-sm);
     padding: var(--margin-medium-sm) var(--margin-large);
+    box-shadow: #000 0px 5px 15px;
 }
 
 .content {
