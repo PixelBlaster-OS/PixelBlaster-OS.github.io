@@ -1,27 +1,93 @@
-import React from 'react'
-import styles from './Header.module.css'
+import React from "react";
+import styles from "./Header.module.css";
 
 const Header = ({ page, setPage, darkMode, setDarkMode }) => {
+  const [showMenu, setShowMenu] = React.useState(false);
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
-    const toggleDarkMode = () => {
-        setDarkMode(!darkMode)
-    }
-    return (
-        <header>
-            <nav className={styles.navbar}>
-                <div className={styles.navbar__logo} onClick={
-                    () => {
-                        toggleDarkMode()
-                    }
-                }>PixelBlaster-OS</div>
-                <ul className={styles.navbar__list}>
-                    <li className={styles.navbar__item} onClick={() => { setPage(1)}}>About</li>
-                    <li className={styles.navbar__item} onClick={() => { setPage(2)}}>Team</li>
-                    <li className={styles.navbar__item} onClick={() => { setPage(3)}}>Downloads</li>
-                </ul>
-            </nav>
-        </header>
-    )
-}
+  return (
+    <>
+      <nav class={styles.navbar}>
+        <div
+          class={styles.navbar__logo}
+          onClick={() => {
+            toggleDarkMode();
+          }}
+        >
+          PixelBlaster-OS
+        </div>
+        <ul className={styles.navbar__list}>
+          <li
+            class={styles.navbar__item}
+            onClick={() => {
+              setPage(1);
+            }}
+          >
+            About
+          </li>
+          <li
+            class={styles.navbar__item}
+            onClick={() => {
+              setPage(2);
+            }}
+          >
+            Team
+          </li>
+          <li
+            class={styles.navbar__item}
+            onClick={() => {
+              setPage(3);
+            }}
+          >
+            Downloads
+          </li>
+        </ul>
 
-export default Header
+        {/* hamburger-menu */}
+        <div className={styles.hamburger__icon}>
+          <img
+            src="/assets/images/hamburger.svg"
+            alt="hamburger-menu"
+            onClick={() => setShowMenu(!showMenu)}
+          />
+        </div>
+      </nav>
+
+      {showMenu && (
+        <div className={styles.hamburger__menu}>
+          <span
+            className={styles.mobile__menu__item}
+            onClick={() => {
+              setPage(1);
+              setShowMenu(false);
+            }}
+          >
+            About
+          </span>
+          <span
+            className={styles.mobile__menu__item}
+            onClick={() => {
+              setPage(2);
+              setShowMenu(false);
+            }}
+          >
+            Team
+          </span>
+          <span
+            className={styles.mobile__menu__item}
+            onClick={() => {
+              setPage(3);
+              setShowMenu(false);
+            }}
+          >
+            Downloads
+          </span>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default Header;
