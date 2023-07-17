@@ -43,6 +43,7 @@
 @media screen and (max-width: 768px) {
   .card {
     grid-template-columns: 1fr;
+    margin: var(--margin-medium-s);
   }
 }
 
@@ -52,6 +53,7 @@
     padding: var(--margin-small);
     gap: var(--margin-medium-sm);
     grid-auto-rows: 25rem;
+    border-radius: 28px;
 
   }
 

@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './Downloads.module.css'
 import DeviceCard from '../../components/DeviceCard/DeviceCard'
+import { motion } from 'framer-motion'
 
-const Downloads = () => {
+const Downloads = ({ key }) => {
 
   const url = 'https://raw.githubusercontent.com/PixelBlaster-Releases/website_api/main/devices.json';
   const [post, setPost] = React.useState([]);
@@ -17,9 +18,17 @@ const Downloads = () => {
       .catch(err => console.log(err));
   }, []);
   return (
-    <div className={styles.card}>
+    <motion.div
+      key={key}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{
+        delay: 0,
+        duration: 0.8
+      }} className={styles.card}>
       {post.length > 0 ? post.map(post => <DeviceCard key={post.id} data={post} />) : <div >No devices found.</div>}
-    </div>
+    </motion.div>
   )
 }
 

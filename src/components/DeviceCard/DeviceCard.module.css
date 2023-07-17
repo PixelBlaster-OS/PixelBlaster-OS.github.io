@@ -80,6 +80,7 @@
         gap: var(--margin-small);
         flex-direction: column;
         justify-content: center;
+        border-radius: 28px;
     }
 
     .card__image {

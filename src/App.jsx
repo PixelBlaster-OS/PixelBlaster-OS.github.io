@@ -4,6 +4,7 @@ import Home from './pages/Home/Home'
 import Header from './components/Header/Header'
 import Team from './pages/Team/Team'
 import Downloads from './pages/Downloads/Downloads'
+import { AnimatePresence } from "framer-motion"
 
 function App() {
 
@@ -24,9 +25,11 @@ function App() {
   return (
     <div className='container'>
       <Header page={page} setPage={setPage} darkMode={darkMode} setDarkMode={setDarkMode} />
-      {page === 1 && <Home darkMode={darkMode} />}
-      {page === 2 && <Team />}
-      {page === 3 && <Downloads />}
+      <AnimatePresence mode='wait'>
+        {page === 1 && <Home key='home' darkMode={darkMode} />}
+        {page === 2 && <Team key='team' />}
+        {page === 3 && <Downloads key='downloads' />}
+      </AnimatePresence>
     </div>
   )
 }

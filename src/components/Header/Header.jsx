@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Header.module.css";
+import { AnimatePresence, motion } from 'framer-motion'
 
 const Header = ({ page, setPage, darkMode, setDarkMode }) => {
   const [showMenu, setShowMenu] = React.useState(false);
@@ -55,37 +56,47 @@ const Header = ({ page, setPage, darkMode, setDarkMode }) => {
         </div>
       </nav>
 
-      {showMenu && (
-        <div className={styles.hamburger__menu}>
-          <span
-            className={styles.mobile__menu__item}
-            onClick={() => {
-              setPage(1);
-              setShowMenu(false);
-            }}
-          >
-            About
-          </span>
-          <span
-            className={styles.mobile__menu__item}
-            onClick={() => {
-              setPage(2);
-              setShowMenu(false);
-            }}
-          >
-            Team
-          </span>
-          <span
-            className={styles.mobile__menu__item}
-            onClick={() => {
-              setPage(3);
-              setShowMenu(false);
-            }}
-          >
-            Downloads
-          </span>
-        </div>
-      )}
+      <AnimatePresence>
+        {showMenu && (
+          <motion.div 
+          key="header"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{
+              delay: 0,
+              duration: 0.5
+          }}  className={styles.hamburger__menu}>
+            <span
+              className={styles.mobile__menu__item}
+              onClick={() => {
+                setPage(1);
+                setShowMenu(false);
+              }}
+            >
+              About
+            </span>
+            <span
+              className={styles.mobile__menu__item}
+              onClick={() => {
+                setPage(2);
+                setShowMenu(false);
+              }}
+            >
+              Team
+            </span>
+            <span
+              className={styles.mobile__menu__item}
+              onClick={() => {
+                setPage(3);
+                setShowMenu(false);
+              }}
+            >
+              Downloads
+            </span>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

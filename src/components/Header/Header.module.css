@@ -119,6 +119,11 @@ p {
     border-radius: 20px;
   }
 
+  .hamburger__menu {
+    top: 4.5rem;
+    right: 2.5rem;
+  }
+
   .navbar__logo {
     font-size: var(--font-small);
   }
