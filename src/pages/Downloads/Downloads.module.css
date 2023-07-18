@@ -25,11 +25,16 @@
   height: 0;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1700px) {
   .card {
     grid-template-columns: 1fr 1fr;
-    margin: var(--margin-small);
-    gap: var(--margin-medium-lm);
+    grid-auto-rows: 25rem;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .card {
+    grid-auto-rows: 20rem;
   }
 }
 
