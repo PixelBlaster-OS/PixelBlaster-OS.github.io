@@ -20,4 +20,5 @@
   --color-light: #ebdbb2;
 
   --filter: invert(93%) sepia(15%) saturate(607%) hue-rotate(341deg) brightness(94%) contrast(96%);
+  --filter-dark: invert(12%) sepia(1%) saturate(0%) hue-rotate(178deg) brightness(96%) contrast(90%);
 }

@@ -14,12 +14,14 @@ function App() {
   if (darkMode) {
     document.documentElement.style.setProperty('--color-light', '#282828');
     document.documentElement.style.setProperty('--color-dark', '#ebdbb2');
-    document.documentElement.style.setProperty('--filter', 'invert(10%) sepia(0%) saturate(0%) hue-rotate(247deg) brightness(101%) contrast(85%)');
+    document.documentElement.style.setProperty('--filter', 'invert(12%) sepia(1%) saturate(0%) hue-rotate(178deg) brightness(96%) contrast(90%)');
+    document.documentElement.style.setProperty('--filter-dark', 'invert(93%) sepia(15%) saturate(607%) hue-rotate(341deg) brightness(94%) contrast(96%)');
   }
   else {
     document.documentElement.style.setProperty('--color-light', '#ebdbb2');
     document.documentElement.style.setProperty('--color-dark', '#282828');
     document.documentElement.style.setProperty('--filter', 'invert(93%) sepia(15%) saturate(607%) hue-rotate(341deg) brightness(94%) contrast(96%)');
+    document.documentElement.style.setProperty('--filter-dark', 'invert(12%) sepia(1%) saturate(0%) hue-rotate(178deg) brightness(96%) contrast(90%)');
   }
 
   return (

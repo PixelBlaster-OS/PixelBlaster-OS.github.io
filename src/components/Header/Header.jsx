@@ -51,6 +51,7 @@ const Header = ({ page, setPage, darkMode, setDarkMode }) => {
           <img
             src="/assets/images/hamburger.svg"
             alt="hamburger-menu"
+            className={styles.hamburger__icon__img}
             onClick={() => setShowMenu(!showMenu)}
           />
         </div>
