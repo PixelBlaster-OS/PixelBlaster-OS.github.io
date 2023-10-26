@@ -7,6 +7,7 @@
     padding: var(--margin-medium-s);
     box-shadow: #000 0px 5px 15px;
     gap: var(--margin-small);
+    text-align: center;
 }
 
 .card__image {
@@ -75,7 +76,7 @@
     }
 }
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 680px) {
     .card {
         gap: var(--margin-small);
         flex-direction: column;
@@ -97,6 +98,8 @@
 @media screen and (max-width: 360px) {
     .card__button {
         margin: 0;
+        font-size: medium;
+    
     }
 
     .card__image {
