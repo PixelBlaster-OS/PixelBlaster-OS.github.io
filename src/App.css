@@ -10,7 +10,7 @@
 
 }
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 670px) {
   .container {
     height: auto;
   }

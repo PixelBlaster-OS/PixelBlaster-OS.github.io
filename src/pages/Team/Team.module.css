@@ -17,6 +17,8 @@
   scrollbar-width: none;
   /* Firefox */
   -ms-overflow-style: none;
+  text-align: center;
+
   /* Internet Explorer 10+ */
 }
 
@@ -29,6 +31,7 @@
 @media screen and (max-width: 1700px) {
   .card {
     grid-template-columns: 1fr 1fr;
+    text-align: center;
   }
 }
 
@@ -37,12 +40,15 @@
     grid-template-columns: 1fr 1fr;
     margin: var(--margin-small);
     gap: var(--margin-medium-lm);
+    text-align: center;
   }
 }
 
 @media screen and (max-width: 1080px) {
   .card {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    
+    text-align: center;
   }
 }
 
@@ -50,6 +56,8 @@
   .card {
     grid-template-columns: 1fr;
     margin: var(--margin-medium-s);
+    text-align: center;
+    justify-content: center;
   }
 }
 
@@ -60,7 +68,10 @@
     gap: var(--margin-medium-sm);
     grid-auto-rows: 25rem;
     border-radius: 28px;
-
+    text-align: center;
+   height: 25rem;
   }
+
+    
 
 }
