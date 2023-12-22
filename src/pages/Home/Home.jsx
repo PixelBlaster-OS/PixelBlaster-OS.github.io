@@ -2,10 +2,10 @@ import React from 'react'
 import styles from './Home.module.css'
 import { motion } from 'framer-motion'
 
-const Home = ({ key, darkMode }) => {
+const Home = ({ id, darkMode }) => {
     return (
         <motion.div
-            key={key}
+            key={id}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

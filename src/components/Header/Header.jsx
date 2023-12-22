@@ -10,9 +10,9 @@ const Header = ({ page, setPage, darkMode, setDarkMode }) => {
 
   return (
     <>
-      <nav class={styles.navbar}>
+      <nav className={styles.navbar}>
         <div
-          class={styles.navbar__logo}
+          className={styles.navbar__logo}
           onClick={() => {
             toggleDarkMode();
           }}
@@ -21,7 +21,7 @@ const Header = ({ page, setPage, darkMode, setDarkMode }) => {
         </div>
         <ul className={styles.navbar__list}>
           <li
-            class={styles.navbar__item}
+            className={styles.navbar__item}
             onClick={() => {
               setPage(1);
             }}
@@ -29,7 +29,7 @@ const Header = ({ page, setPage, darkMode, setDarkMode }) => {
             About
           </li>
           <li
-            class={styles.navbar__item}
+            className={styles.navbar__item}
             onClick={() => {
               setPage(2);
             }}
@@ -37,7 +37,7 @@ const Header = ({ page, setPage, darkMode, setDarkMode }) => {
             Team
           </li>
           <li
-            class={styles.navbar__item}
+            className={styles.navbar__item}
             onClick={() => {
               setPage(3);
             }}

@@ -3,10 +3,10 @@ import styles from './Team.module.css'
 import TeamCard from '../../components/TeamCard/TeamCard'
 import { motion } from 'framer-motion'
 
-const Team = ({ key }) => {
+const Team = ({ id }) => {
 
   const url = 'https://raw.githubusercontent.com/PixelBlaster-Releases/website_api/main/team.json';
-  const [post, setPost] = React.useState([]);
+  let [post, setPost] = React.useState([]);
 
   React.useEffect(() => {
     fetch(url)
@@ -19,7 +19,7 @@ const Team = ({ key }) => {
   }, []);
   return (
     <motion.div
-      key={key}
+      key={id}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

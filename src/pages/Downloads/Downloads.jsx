@@ -2,24 +2,24 @@ import React from 'react'
 import styles from './Downloads.module.css'
 import DeviceCard from '../../components/DeviceCard/DeviceCard'
 import { motion } from 'framer-motion'
+import axios from 'axios'
 
-const Downloads = ({ key }) => {
+const Downloads = ({ id }) => {
 
   const url = 'https://raw.githubusercontent.com/PixelBlaster-Releases/website_api/main/devices.json';
   const [post, setPost] = React.useState([]);
 
   React.useEffect(() => {
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        setPost(data.response)
-        console.log(data)
-      })
+    axios.get(url)
+      .then(res =>
+        setPost(res.data.response)
+        )
       .catch(err => console.log(err));
   }, []);
+
   return (
     <motion.div
-      key={key}
+      key={id}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -27,7 +27,7 @@ const Downloads = ({ key }) => {
         delay: 0,
         duration: 0.8
       }} className={styles.card}>
-      {post.length > 0 ? post.map(post => <DeviceCard key={post.id} data={post} />) : <div >No devices found.</div>}
+      {post.length > 0 ? post.map(post => <DeviceCard key={post.id} data={post} url={post.url} />) : <div >No devices found.</div>}
     </motion.div>
   )
 }
